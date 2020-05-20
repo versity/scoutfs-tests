@@ -237,10 +237,10 @@ if [ -n "$T_KMOD_REPO" ]; then
 	msg "building kmod repo $T_KMOD_REPO branch $T_KMOD_BRANCH"
 	cmd cd "$T_KMOD_REPO"
 
-	cmd git fetch
-	cmd git rev-parse --verify "origin/$T_KMOD_BRANCH"
-	cmd git checkout -B "$T_KMOD_BRANCH" --track origin/$T_KMOD_BRANCH
-	cmd git pull --rebase
+	#cmd git fetch
+	#cmd git rev-parse --verify "origin/$T_KMOD_BRANCH"
+	#cmd git checkout -B "$T_KMOD_BRANCH" --track origin/$T_KMOD_BRANCH
+	#cmd git pull --rebase
 	cmd make
 	cmd sync
 	cmd cd -
@@ -253,10 +253,10 @@ if [ -n "$T_UTILS_REPO" ]; then
 	msg "building utils repo $T_UTILS_REPO branch $T_UTILS_BRANCH"
 	cmd cd "$T_UTILS_REPO"
 
-	cmd git fetch
-	cmd git rev-parse --verify "origin/$T_UTILS_BRANCH"
-	cmd git checkout -B "$T_UTILS_BRANCH" --track origin/$T_UTILS_BRANCH
-	cmd git pull --rebase
+	#cmd git fetch
+	#cmd git rev-parse --verify "origin/$T_UTILS_BRANCH"
+	#cmd git checkout -B "$T_UTILS_BRANCH" --track origin/$T_UTILS_BRANCH
+	#cmd git pull --rebase
 	# might need git clean to remove stale src/*.o after update
 	cmd make
 	cmd sync
